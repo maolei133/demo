@@ -9,16 +9,15 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: demo:${CICD_EXECUTION_SEQUENCE}
-      registry: 127.0.0.1:34040
+      tag: registry.baison.net:9443/e3plus2.0/demo:${CICD_GIT_BRANCH}-${CICD_EXECUTION_SEQUENCE}
+      pushRemote: true
+      registry: registry.baison.net:9443
 - name: deploy
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
     when:
-      branch:
-        exclude:
-        - master
+      branch: {}
 timeout: 60
 branch:
   include:

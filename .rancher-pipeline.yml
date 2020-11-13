@@ -9,9 +9,9 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: registry.baison.net:9443/e3plus2.0-home/demo:${CICD_GIT_BRANCH}-${CICD_EXECUTION_SEQUENCE}
+      tag: baison2.maolei.buzz/e3plus2.0/demo:${CICD_GIT_BRANCH}-${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
-      registry: registry.baison.net:9443
+      registry: baison2.maolei.buzz
 - name: deploy
   steps:
   - applyYamlConfig:

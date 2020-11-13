@@ -9,7 +9,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: baison2.maolei.buzz/e3plus2.0/demo:${CICD_GIT_BRANCH}-${CICD_EXECUTION_SEQUENCE}
+      tag: e3plus2.0/demo:${CICD_GIT_BRANCH}-${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
       registry: baison2.maolei.buzz
 - name: deploy

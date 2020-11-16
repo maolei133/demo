@@ -13,7 +13,7 @@ stages:
       pushRemote: true
       registry: 139.217.216.47:8081
   env:
-      PLUGIN_INSECURE: "true"
+     PLUGIN_INSECURE: "true"
 - name: deploy
   steps:
   - applyYamlConfig:

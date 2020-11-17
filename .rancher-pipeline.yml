@@ -12,8 +12,6 @@ stages:
       tag: 139.217.216.47:8081/e3plus2.0/demo:${CICD_GIT_BRANCH}-${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
       registry: 139.217.216.47:8081
-    env:
-      PLUGIN_INSECURE: "true"
 - name: deploy
   steps:
   - applyYamlConfig:

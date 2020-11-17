@@ -4,6 +4,9 @@ metadata:
   name: demo-deployment
 spec:
   replicas: 1
+  selector:
+    matchLables:
+      app: demo
   template:
     metadata:
       labels:

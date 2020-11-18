@@ -2,7 +2,7 @@ stages:
 - name: compile
   steps:
   - runScriptConfig:
-      image: maven:3.6.3-openjdk-8-slim
+      image: 139.217.216.47:8081/e3plus2.0/maven
       shellScript: mvn clean package -Dmaven.test.skip=true
 - name: publish
   steps:
